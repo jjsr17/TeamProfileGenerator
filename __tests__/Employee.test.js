@@ -36,3 +36,14 @@ test("Can instantiate Employee instance", () => {
   });
 
   //get for id and email
+  test("Can get id via getId()", () => {
+    const expectedVal = "23";
+    const e = new Employee(test,expectedVal);
+    expect(e.getId()).toBe(expectedVal);
+  });
+
+  test("Can get email via getEmail()", () => {
+    const expectedVal = "info@email.com";
+    const e = new Employee(expectedVal);
+    expect(e.getEmail()).toBe(expectedVal);
+  });
